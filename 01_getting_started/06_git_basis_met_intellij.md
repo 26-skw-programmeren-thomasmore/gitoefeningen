@@ -42,14 +42,17 @@ Dit verandert wel veel voor je project in de user interface van IntelliJ:
 * Als je met IntelliJ werkt moet je asap een .gitignore file toevoegen aan je project. zie  [GitIgnore file](08_gitignore.md)
 * Maak in de root van je project een nieuwe file met naam **.gitignore** (dus de naam start met een puntje). 
 * Git komt vragen of je deze file wil toevoegen in git, dat is OK. 
-* Open deze file en voeg zeker deze 2 lijnen toe:
+* Open deze file en voeg zeker deze lijnen toe:
 ```.gitignore
   .idea
   *.iml
+  out/
 ```
 * Voor sommige soorten projecten voorziet IntelliJ zelf al een .gitignore file. Je moet wel altijd nog deze 2 lijnen toevoegen. 
-* Dit is nodig omdat we de IntelliJ configuratie zeker niet in git willen toevoegen. 
-Deze folder en file bevatten info voor IntelliJ over je project 
+* de eerste 2 lijnen: Dit is nodig omdat we de IntelliJ configuratie zeker niet in git willen toevoegen. 
+Deze folder en file bevatten info voor IntelliJ over je project
+* de 3e lijn zorgt ervoor dat de out-folder niet in je git repo terecht komt. 
+Voor een simpel java project bevat de out-folder een .class file voor elke .java file. 
 
 ### Commits toevoegen aan je lokale repository 
 
